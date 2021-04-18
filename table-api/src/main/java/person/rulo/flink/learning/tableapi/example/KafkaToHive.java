@@ -31,6 +31,7 @@ public class KafkaToHive {
         String HIVE_CATALOG = "hive_test";
         String DEFAULT_DATABASE = "test";
         String HIVE_CONF_DIR = "E:\\tmp\\conf";
+//        String HIVE_CONF_DIR = "/mnt/e/tmp/conf";
         Catalog catalog = new HiveCatalog(HIVE_CATALOG, DEFAULT_DATABASE, HIVE_CONF_DIR);
         tableEnv.registerCatalog(HIVE_CATALOG, catalog);
         tableEnv.useCatalog(HIVE_CATALOG);

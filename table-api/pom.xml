@@ -51,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-shaded-hadoop-2-uber</artifactId>
+            <artifactId>flink-shaded-hadoop-3-uber</artifactId>
         </dependency>
         <!-- flink kafka -->
         <dependency>
@@ -64,6 +64,5 @@
             <artifactId>hive-exec</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>
