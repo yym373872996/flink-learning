@@ -11,8 +11,8 @@ import person.rulo.flink.learning.common.jdbc.PostgreSQLTestDBConnConf;
 import java.util.Arrays;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 10:18
+ * @author rulo
+ * @date 2020/3/20 10:18
  *
  * 使用 SQL 方式实现的 JDBC 连接器
  */

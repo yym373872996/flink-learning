@@ -13,8 +13,8 @@ import org.apache.flink.table.catalog.hive.HiveCatalog;
 import java.time.Duration;
 
 /**
- * @Author rulo
- * @Date 2021/4/10 13:19
+ * @author rulo
+ * @date 2021/4/10 13:19
  */
 public class KafkaToHive {
     public static void main(String[] args) {

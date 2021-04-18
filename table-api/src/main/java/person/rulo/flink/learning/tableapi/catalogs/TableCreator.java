@@ -7,8 +7,8 @@ import org.apache.flink.table.api.bridge.java.BatchTableEnvironment;
 import java.util.Arrays;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 10:25
+ * @author rulo
+ * @date 2020/3/20 10:25
  *
  * 在 Catalogs 里创建 Table
  */

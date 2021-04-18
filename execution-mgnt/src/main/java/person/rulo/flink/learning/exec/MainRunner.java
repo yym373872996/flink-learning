@@ -5,8 +5,8 @@ import person.rulo.flink.learning.exec.conf.ExecutionConfiguration;
 import person.rulo.flink.learning.exec.remote.RemoteExecution;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 14:38
+ * @author rulo
+ * @date 2020/3/20 14:38
  */
 public class MainRunner {
     public static void main(String[] args) throws Exception {

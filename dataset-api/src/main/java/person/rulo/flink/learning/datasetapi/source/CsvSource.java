@@ -5,8 +5,8 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple1;
 
 /**
- * @Author rulo
- * @Date 2020/5/6 9:17
+ * @author rulo
+ * @date 2020/5/6 9:17
  */
 public class CsvSource {
 

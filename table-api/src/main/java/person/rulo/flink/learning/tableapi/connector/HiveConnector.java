@@ -5,8 +5,8 @@ import org.apache.flink.table.api.TableEnvironment;
 import org.apache.flink.table.catalog.hive.HiveCatalog;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 11:03
+ * @author rulo
+ * @date 2020/3/20 11:03
  *
  * 使用 java 函数实现的 Hive 连接器
  */

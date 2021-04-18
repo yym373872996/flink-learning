@@ -4,8 +4,8 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 11:03
+ * @author rulo
+ * @date 2020/3/20 11:03
  *
  * 使用 java 函数实现的 JDBC 连接器
  */

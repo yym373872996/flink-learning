@@ -1,8 +1,8 @@
 package person.rulo.flink.learning.common.jdbc;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 16:23
+ * @author rulo
+ * @date 2020/3/20 16:23
  */
 public class OracleTestDBConnConf {
 

@@ -4,8 +4,8 @@ import org.apache.flink.api.common.ExecutionConfig;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 14:32
+ * @author rulo
+ * @date 2020/3/20 14:32
  */
 public class ExecutionConfiguration {
 

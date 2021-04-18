@@ -1,8 +1,8 @@
 package person.rulo.flink.learning.tableapi.source;
 
 /**
- * @Author rulo
- * @Date 2020/3/20 11:15
+ * @author rulo
+ * @date 2020/3/20 11:15
  *
  * 使用 Table API 提供的 JDBCTableSource 来实现 Source 源的添加
  */
