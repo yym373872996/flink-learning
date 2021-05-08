@@ -1,0 +1,11 @@
+option java_package = "person.rulo.flink.learning.dstreamapi.proto";
+option java_outer_classname = "PushMessageProto";
+
+message PushMessageMq {
+    required string messageId = 1; // 消息ID
+    required string taskId = 2; //任务ID
+    required int32 targetType = 3; // 推送目标类型， IMEI:-1, REGISTRATION_ID:2, DUID:-9, OUID:-11
+    required string targetValue = 4; // 1000条IMEI或REGID, 用逗号分隔
+    required int32 pushType = 5; // 推送类型， 标签推送：1, 个性化推送：2
+    required int32 targetCount = 6; // 推送目标总数， 每个消息包都需要传
+}
