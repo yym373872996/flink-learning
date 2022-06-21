@@ -27,7 +27,7 @@
         <flink.shaded.hadoop.version>3.1.1.7.2.1.0-327-9.0</flink.shaded.hadoop.version>
         <slf4j.version>1.7.7</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
-        <mysql.jdbc.version>5.1.46</mysql.jdbc.version>
+        <mysql.jdbc.version>8.0.28</mysql.jdbc.version>
         <sqlserver.jdbc.version>4.0</sqlserver.jdbc.version>
         <oracle.jdbc.version>10.2.0.4.0</oracle.jdbc.version>
         <postgre.jdbc.verion>42.2.11</postgre.jdbc.verion>
