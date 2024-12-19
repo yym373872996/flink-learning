@@ -21,7 +21,7 @@ public class KafkaToHive {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
         EnvironmentSettings environmentSettings = EnvironmentSettings.newInstance()
-                .useBlinkPlanner()
+//                .useBlinkPlanner()
                 .inStreamingMode()
                 .build();
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env, environmentSettings);

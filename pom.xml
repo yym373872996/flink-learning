@@ -12,8 +12,8 @@
         <module>common</module>
         <module>dataset-api</module>
         <module>datastream-api</module>
-        <module>execution-mgnt</module>
         <module>table-api</module>
+        <module>cdc</module>
         <module>build</module>
     </modules>
 
@@ -23,11 +23,12 @@
         <scala.binary.version>2.12</scala.binary.version>
         <maven.compiler.version>3.2</maven.compiler.version>
         <maven.assembly.version>3.2.0</maven.assembly.version>
-        <flink.version>1.12.2</flink.version>
+        <flink.version>1.14.4</flink.version>
+        <flink.cdc.version>2.3.0</flink.cdc.version>
         <flink.shaded.hadoop.version>3.1.1.7.2.1.0-327-9.0</flink.shaded.hadoop.version>
         <slf4j.version>1.7.7</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
-        <mysql.jdbc.version>5.1.46</mysql.jdbc.version>
+        <mysql.jdbc.version>8.0.27</mysql.jdbc.version>
         <sqlserver.jdbc.version>4.0</sqlserver.jdbc.version>
         <oracle.jdbc.version>10.2.0.4.0</oracle.jdbc.version>
         <postgre.jdbc.verion>42.2.11</postgre.jdbc.verion>
@@ -46,7 +47,22 @@
             </dependency>
             <dependency>
                 <groupId>person.rulo</groupId>
+                <artifactId>flink-learning-dataset-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>person.rulo</groupId>
+                <artifactId>flink-learning-datastream-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>person.rulo</groupId>
                 <artifactId>flink-learning-table-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>person.rulo</groupId>
+                <artifactId>flink-learning-cdc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- log -->
@@ -102,10 +118,11 @@
                 <artifactId>flink-table-planner_${scala.binary.version}</artifactId>
                 <version>${flink.version}</version>
             </dependency>
+            <!-- flink cdc -->
             <dependency>
-                <groupId>org.apache.flink</groupId>
-                <artifactId>flink-table-planner-blink_${scala.binary.version}</artifactId>
-                <version>${flink.version}</version>
+                <groupId>com.ververica</groupId>
+                <artifactId>flink-sql-connector-mysql-cdc</artifactId>
+                <version>${flink.cdc.version}</version>
             </dependency>
             <!-- flink connector -->
             <dependency>
