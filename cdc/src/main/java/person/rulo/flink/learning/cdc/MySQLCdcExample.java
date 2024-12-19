@@ -4,13 +4,14 @@ import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
-public class ReadMySQLExample {
+public class MySQLCdcExample {
 
     public static void main(String[] args) {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(new Configuration());
         env.enableCheckpointing(5000);
         env.setParallelism(1);
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
+        // 源表
         tableEnv.executeSql("CREATE TABLE flink_score (\n" +
                 "     id INT,\n" +
                 "     name STRING,\n" +
@@ -25,12 +26,22 @@ public class ReadMySQLExample {
                 "     'password' = '1qazXSW@',\n" +
                 "     'database-name' = 'dev',\n" +
                 "     'table-name' = 't_score')");
-        // 直接查询源表
-//        tableEnv.executeSql("select * from flink_score").print();’
-        // 分组聚合
-//        tableEnv.executeSql("select gender, avg(score) as avg_score from flink_score group by gender").print();
-        // 开窗topN
-        tableEnv.executeSql("select gender, name, sum_score, rn\n" +
+        // 目标表
+        tableEnv.executeSql("CREATE TABLE flink_rank (\n" +
+                "     gender STRING,\n" +
+                "     name STRING,\n" +
+                "     sum_score DOUBLE,\n" +
+                "     rn BIGINT,\n" +
+                "     PRIMARY KEY(gender, rn) NOT ENFORCED\n" +
+                "     ) WITH (" +
+                "     'connector' = 'jdbc'," +
+                "     'url' = 'jdbc:mysql://localhost:3306/dev'," +
+                "     'table-name' = 't_rank'," +
+                "     'username' = 'root'," +
+                "     'password' = '1qazXSW@')");
+        // 写入源表到目标表
+        tableEnv.executeSql("insert into flink_rank\n" +
+                "select gender, name, sum_score, rn\n" +
                 "from \n" +
                 "(\n" +
                 "select gender, name, sum_score,\n" +
@@ -42,7 +53,7 @@ public class ReadMySQLExample {
                 "     group by gender, name\n" +
                 ")\n" +
                 ")\n" +
-                "where rn <=2").print();
+                "where rn <=2");
     }
 
 }
