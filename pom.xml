@@ -31,7 +31,7 @@
         <mysql.jdbc.version>8.0.27</mysql.jdbc.version>
         <sqlserver.jdbc.version>4.0</sqlserver.jdbc.version>
         <oracle.jdbc.version>10.2.0.4.0</oracle.jdbc.version>
-        <postgre.jdbc.verion>42.2.11</postgre.jdbc.verion>
+        <postgre.jdbc.verion>42.4.1</postgre.jdbc.verion>
         <hive.version>3.1.2</hive.version>
         <protobuf.version>3.25.3</protobuf.version>
         <grpc.version>1.63.0</grpc.version>
